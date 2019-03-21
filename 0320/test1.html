@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p>first number</p> 
+  <input type="number" id="firstn">
+  <p>second number</p>
+  <input type="number" id="secondn"><br>
+
+<script>
+function plus(){
+	var x, y
+	x=parseFloat(document.getElementById("firstn").value);
+	y=parseFloat(document.getElementById("secondn").value);
+	document.getElementById("result").innerHTML= x + y;
+}
+
+function minus(){
+	var x, y
+	x=parseFloat(document.getElementById("firstn").value);
+	y=parseFloat(document.getElementById("secondn").value);
+	document.getElementById("result").innerHTML= x - y;
+}
+
+function multiply(){
+	var x, y
+	x=parseFloat(document.getElementById("firstn").value);
+	y=parseFloat(document.getElementById("secondn").value);
+	document.getElementById("result").innerHTML= x * y;
+}
+
+function divided(){
+	var x, y
+	x=parseFloat(document.getElementById("firstn").value);
+	y=parseFloat(document.getElementById("secondn").value);
+	document.getElementById("result").innerHTML= x / y;
+}
+
+function c(){
+	document.getElementById("firstn").value=" ";
+	document.getElementById("secondn").value=" ";
+	document.getElementById("result").innerHTML=" ";
+}
+</script>
+
+<button onclick="plus()">+</button>
+<button onclick="minus()">-</button>
+<button onclick="multiply()">*</button>
+<button onclick="divided()">/</button>
+<button onclick="c()">c</button>
+<p>數字相乘結果</p>
+<p id="result"></p>
+
+</body>
+</html>

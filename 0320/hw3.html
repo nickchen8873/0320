@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+<p>輸入你的成績</p> 
+  <input type="number" id="grade">
+
+<script>
+function myfunction(){
+	var x, y
+	x=parseFloat(document.getElementById("grade").value);
+	if (x<60) {
+		text="不及格";
+	}else{
+		text="及格";
+	}
+	document.getElementById("result").innerHTML= text;
+}
+</script>
+
+<button onclick="myfunction()">判斷</button>
+
+<p id="result"></p>
+
+</body>
+</html>
