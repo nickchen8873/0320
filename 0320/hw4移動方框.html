@@ -1,0 +1,29 @@
+!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+</head>
+<body>
+	<canvas id ="myCanvas" width="800" height="600" style="border:1px solid #d3d3d3;">
+		<script language=>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			var i =0;
+			ctx.fillStyle = "red";
+			ctx.fillRect(0,50,100,100)
+			function move()	{
+				ctx.clearRect(i,50,100,100);
+				i= i + 10 ;
+				if (i > 700){
+					i = 700;
+				}
+				ctx.fillRect(i,50,100,100);			
+			}
+
+		</script>
+	</canvas>
+	<br>
+	<button style="padding: 10px 50px;" onclick="setInterval(move,50)">move</button>
+</body>
+</html>
